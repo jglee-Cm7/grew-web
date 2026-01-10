@@ -20,8 +20,8 @@ const LocationsPage = () => {
         교회 찾기
       </PageHeader>
       <section className="px-4 py-8 sm:px-6 md:px-8 lg:px-12">
-        <div className="mx-auto flex max-w-[1200px] flex-col gap-6 py-12 sm:gap-8 sm:py-16 md:py-20">
-          <p className="max-w-3xl text-left text-base text-gray-800 sm:text-sm md:text-lg">
+        <div className="mx-auto flex w-full flex-col gap-6 py-12 sm:gap-8 sm:py-16 md:py-20">
+          <p className="text-center text-base font-semibold text-gray-800 sm:text-sm md:text-lg">
             지도
           </p>
           <KakaoMap markers={locations} />
