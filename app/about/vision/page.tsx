@@ -1,5 +1,5 @@
 import PageHeader from "@/components/layout/PageHeader";
-import AboutVisionBg from "@/public/pageheaders/about-vision-bg.png";
+import AboutVisionBg from "@/public/pageheaders/about-vision-bg.webp";
 import FullLogo from "@/public/logo/logo-img-name-text.svg";
 import Image from "next/image";
 import SupportProcessSection from "@/components/aboutpage/SupportProcessSection";
@@ -48,7 +48,7 @@ const AboutVisionPage = () => {
         {/* 상단 이미지 배경 영역 */}
         <div className="relative flex min-h-[600px] w-full items-center justify-center py-20 md:min-h-[800px] md:py-32">
           <Image
-            src="/about-page/bg-who-01.png"
+            src="/about-page/bg-who-01.webp"
             alt="왜 도시인가 배경"
             fill
             priority

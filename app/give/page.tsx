@@ -1,7 +1,7 @@
 "use client";
 
 import PageHeader from "@/components/layout/PageHeader";
-import GivePageBg from "@/public/pageheaders/give-bg.png";
+import GivePageBg from "@/public/pageheaders/give-bg.webp";
 import InfoBox from "@/components/ui/InfoBox";
 import TabSystem from "@/components/ui/TabSystem";
 import AnimatedButton from "@/components/ui/AnimatedButton";

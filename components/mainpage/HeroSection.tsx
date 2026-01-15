@@ -41,7 +41,7 @@ export default function Hero() {
         <video
           ref={videoRef}
           className="h-full w-full object-cover"
-          poster="/church-poster.png"
+          poster="/church-poster.webp"
           onEnded={handleVideoEnded}
           playsInline
           muted={!isPlaying} /* Muted when not actively playing */

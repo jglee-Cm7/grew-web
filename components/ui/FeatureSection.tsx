@@ -77,7 +77,7 @@ export default function FeatureSection({
             <FadeIn>
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
                 <Image
-                  src={imageUrl || "/placeholder-image.jpg"}
+                  src={imageUrl || "/placeholder-image.webp"}
                   alt={imageAlt || "Feature image"}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -106,20 +106,22 @@ export default function FeatureSection({
                   {headingText}
                 </h2>
               )}
-              
+
               {/* Main body text */}
               {bodyText && (
                 <div className="mb-6 text-base leading-relaxed md:text-lg">
                   {typeof bodyText === "string" ? <p>{bodyText}</p> : bodyText}
                 </div>
               )}
-              
+
               {/* Subsections */}
               {subSections.length > 0 && (
                 <div className="mt-2 space-y-5">
                   {subSections.map((subsection, index) => (
                     <div key={index} className="mb-4">
-                      <h3 className="mb-2 text-xl font-bold">{subsection.title}</h3>
+                      <h3 className="mb-2 text-xl font-bold">
+                        {subsection.title}
+                      </h3>
                       <div className="text-base leading-relaxed md:text-lg">
                         {typeof subsection.content === "string" ? (
                           <p>{subsection.content}</p>

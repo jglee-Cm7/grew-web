@@ -7,21 +7,21 @@ const staffMembers: StaffMember[] = [
     id: "1",
     name: "이정규 목사",
     affiliations: ["시광교회"],
-    imageSrc: "/about-page/pastor-lee.jpg",
+    imageSrc: "/about-page/pastor-lee.webp",
     badgeText: "대표",
   },
   {
     id: "2",
     name: "고상섭 목사",
     affiliations: ["고신교회 담임", "CTCKorea 이사 / 옥한흠 은보 포럼 이사"],
-    imageSrc: "/about-page/pastor-go.png",
+    imageSrc: "/about-page/pastor-go.webp",
     badgeText: "자문위원",
   },
   {
     id: "3",
     name: "임형규 목사",
     affiliations: ["라이트하우스 서울숲 담임", "한동신학대학원 졸업 (M.Div)"],
-    imageSrc: "/about-page/pastor-lim.png",
+    imageSrc: "/about-page/pastor-lim.webp",
     badgeText: "자문위원",
   },
 ];
@@ -29,7 +29,7 @@ const staffMembers: StaffMember[] = [
 const AboutTeamPage = () => {
   return (
     <main>
-      <PageHeader backgroundImage="/pageheaders/about-team-bg.png">
+      <PageHeader backgroundImage="/pageheaders/about-team-bg.webp">
         섬기는 사람들
       </PageHeader>
       <section className="mt-20 mb-40 bg-gray-50 py-12">
