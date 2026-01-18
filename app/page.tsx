@@ -1,16 +1,15 @@
-import About from "../components/mainpage/AboutSection";
-import Give from "../components/mainpage/GiveSection";
-import Hero from "../components/mainpage/HeroSection";
-import Locations from "../components/mainpage/LocationsSection";
-
+import { AboutSection } from "@/components/features/main";
+import { GiveSection } from "@/components/features/main";
+import { HeroSection } from "@/components/features/main";
+import { LocationSection } from "@/components/features/main";
 
 export default function MainPage() {
   return (
     <main>
-      <Hero />
-      <About />
-      <Locations />
-      <Give />
+      <HeroSection />
+      <AboutSection />
+      <LocationSection />
+      <GiveSection />
     </main>
-  )
+  );
 }

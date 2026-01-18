@@ -1,8 +1,7 @@
-import PageHeader from "@/components/layout/PageHeader";
-import FadeIn from "@/components/ui/FadeIn";
-import FeatureSection from "@/components/ui/FeatureSection";
+import { PageHeader } from "@/components/layout";
+import { FadeIn, FeatureSection } from "@/components/ui";
 
-const ForPlantersPage = () => {
+export default function ForPlantersPage() {
   return (
     <main>
       <PageHeader backgroundImage="/pageheaders/for-planters-bg.webp">
@@ -56,6 +55,4 @@ const ForPlantersPage = () => {
       </section>
     </main>
   );
-};
-
-export default ForPlantersPage;
+}

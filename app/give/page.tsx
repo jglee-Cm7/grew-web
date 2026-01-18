@@ -1,14 +1,10 @@
 "use client";
 
-import PageHeader from "@/components/layout/PageHeader";
-import GivePageBg from "@/public/pageheaders/give-bg.webp";
-import InfoBox from "@/components/ui/InfoBox";
-import TabSystem from "@/components/ui/TabSystem";
-import AnimatedButton from "@/components/ui/AnimatedButton";
-import FadeIn from "@/components/ui/FadeIn";
 import Image from "next/image";
+import { PageHeader } from "@/components/layout";
+import { AnimatedButton, FadeIn, InfoBox, Tabs } from "@/components/ui";
 
-const GivePage = () => {
+export default function GivePage() {
   // Tab 1 content - Physical Donations
   const physicalDonationsContent = (
     <div>
@@ -131,7 +127,9 @@ const GivePage = () => {
 
   return (
     <main>
-      <PageHeader backgroundImage={GivePageBg}>후원안내</PageHeader>
+      <PageHeader backgroundImage={"/pageheaders/give-bg.webp"}>
+        후원안내
+      </PageHeader>
       <section className="px-4 py-8 sm:px-6 md:px-8 lg:px-12">
         <FadeIn>
           <div className="mx-auto flex flex-col items-center gap-6 py-12 text-center sm:gap-8 sm:py-16 md:py-20">
@@ -158,10 +156,8 @@ const GivePage = () => {
         </FadeIn>
       </section>
       <section className="container mx-auto max-w-6xl px-4 py-8">
-        <TabSystem tabs={tabs} defaultTab="physical" />
+        <Tabs tabs={tabs} defaultTab="physical" />
       </section>
     </main>
   );
-};
-
-export default GivePage;
+}

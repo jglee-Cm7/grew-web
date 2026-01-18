@@ -1,9 +1,9 @@
 // app/church-planting/page.tsx
-import PageHeader from "@/components/layout/PageHeader";
-import ChurchPlantingTabs from "@/components/ministrypage/ChurchPlantingTabs";
-import FadeIn from "@/components/ui/FadeIn";
+import { PageHeader } from "@/components/layout";
+import { ChurchPlantingTabs } from "@/components/features";
+import { FadeIn } from "@/components/ui";
 
-const ChurchPlantingPage = () => {
+export default function ChurchPlantingPage() {
   return (
     <main>
       <PageHeader backgroundImage="/pageheaders/church-planting-bg.webp">
@@ -27,6 +27,4 @@ const ChurchPlantingPage = () => {
       </section>
     </main>
   );
-};
-
-export default ChurchPlantingPage;
+}

@@ -1,21 +1,21 @@
-import PageHeader from "@/components/layout/PageHeader";
-import AboutVisionBg from "@/public/pageheaders/about-vision-bg.webp";
-import FullLogo from "@/public/logo/logo-img-name-text.svg";
 import Image from "next/image";
-import SupportProcessSection from "@/components/aboutpage/SupportProcessSection";
-import FadeIn from "@/components/ui/FadeIn";
+import { PageHeader } from "@/components/layout";
+import { SupportProcessSection } from "@/components/features";
+import { FadeIn } from "@/components/ui";
 
-const AboutVisionPage = () => {
+export default function AboutVisionPage() {
   return (
     <main>
-      <PageHeader backgroundImage={AboutVisionBg}>우리의 비전</PageHeader>
+      <PageHeader backgroundImage={"/pageheaders/about-vision-bg.webp"}>
+        우리의 비전
+      </PageHeader>
       <FadeIn>
         <section className="mx-auto mt-8 flex max-w-4xl flex-col items-center px-4 py-16 text-center">
           {/* Logo */}
           <div className="mb-8">
             <div className="relative h-[140px] w-[140px] md:h-[160px] md:w-[160px] lg:h-[200px] lg:w-[200px]">
               <Image
-                src={FullLogo}
+                src={"/logo/logo-img-name-text.svg"}
                 alt="Grew Logo"
                 fill
                 priority
@@ -102,6 +102,4 @@ const AboutVisionPage = () => {
       </FadeIn>
     </main>
   );
-};
-
-export default AboutVisionPage;
+}

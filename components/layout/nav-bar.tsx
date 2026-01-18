@@ -2,7 +2,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import LogoImg from "../../../public/logo-header.svg";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +17,7 @@ export default function Navbar() {
             <Link href="/">
               <div className="relative h-8 w-28 sm:w-36">
                 <Image
-                  src={LogoImg}
+                  src={"/logo/logo-header.svg"}
                   alt="그루 로고"
                   fill
                   style={{ objectFit: "contain" }}

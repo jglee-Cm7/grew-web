@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode } from "react";
 
 interface SubTextItem {
   text: string;
@@ -12,24 +12,24 @@ interface InfoBoxProps {
   children?: ReactNode; // For any custom content
 }
 
-const InfoBox: React.FC<InfoBoxProps> = ({ 
-  heading, 
-  mainText, 
+export function InfoBox({
+  heading,
+  mainText,
   subTextItems = [],
-  children 
-}) => {
+  children,
+}: InfoBoxProps) {
   return (
     <div className="flex items-start rounded-lg border border-gray-200 bg-white p-6">
       {/* Left side - green heading */}
       <div className="w-32 shrink-0">
         <h3 className="font-medium text-[#27AF58]">{heading}</h3>
       </div>
-      
+
       {/* Right side - content */}
       <div className="flex-1">
         {/* Main text if provided */}
         {mainText && <p className="text-gray-800">{mainText}</p>}
-        
+
         {/* Sub-text items if provided */}
         {subTextItems.length > 0 && (
           <ul className="mt-2 space-y-2">
@@ -43,12 +43,10 @@ const InfoBox: React.FC<InfoBoxProps> = ({
             ))}
           </ul>
         )}
-        
+
         {/* Any additional custom content */}
         {children}
       </div>
     </div>
   );
-};
-
-export default InfoBox;
+}

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
 interface FadeInProps {
   children: React.ReactNode;
@@ -12,7 +12,7 @@ interface FadeInProps {
   reverseOnExit?: boolean; // Whether to reverse animation on exit
 }
 
-const FadeIn: React.FC<FadeInProps> = ({
+export function FadeIn({
   children,
   direction = "up",
   duration = "medium",
@@ -21,7 +21,7 @@ const FadeIn: React.FC<FadeInProps> = ({
   threshold = 0.3, // Trigger when 30% is visible
   rootMargin = "0px 0px -50px 0px", // Trigger earlier (before fully in view)
   reverseOnExit = true, // Keep default as true since you want to keep it
-}) => {
+}: FadeInProps) {
   const directionClasses = {
     up: "translate-y-8",
     down: "-translate-y-8",
@@ -100,6 +100,4 @@ const FadeIn: React.FC<FadeInProps> = ({
       </div>
     </div>
   );
-};
-
-export default FadeIn;
+}

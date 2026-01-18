@@ -1,11 +1,11 @@
 "use client";
 import { CustomOverlayMap, Map, MapMarker } from "react-kakao-maps-sdk";
-import useKakaoLoader from "./useKakaoLoader";
-import React, { useState } from "react";
+import { useKakaoLoader } from "@/hooks";
+import { useState } from "react";
 
 type Marker = { title: string; lat: number; lng: number };
 
-const EventMarker: React.FC<{ marker: Marker }> = ({ marker }) => {
+function EventMarker({ marker }: { marker: Marker }) {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
@@ -36,11 +36,13 @@ const EventMarker: React.FC<{ marker: Marker }> = ({ marker }) => {
       )}
     </>
   );
-};
+}
 
-const KakaoMap: React.FC<{
+export function KakaoMap({
+  markers,
+}: {
   markers: { title: string; lat: number; lng: number }[];
-}> = ({ markers: locations }) => {
+}) {
   useKakaoLoader();
 
   return (
@@ -58,11 +60,9 @@ const KakaoMap: React.FC<{
       }}
       level={8} // 지도의 확대 레벨
     >
-      {locations.map((marker) => (
+      {markers.map((marker) => (
         <EventMarker key={marker.title} marker={marker} />
       ))}
     </Map>
   );
-};
-
-export default KakaoMap;
+}

@@ -2,10 +2,8 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import LogoImg from "../../public/logo/logo-header.svg";
-import WhiteLogoImg from "../../public/logo/logo-text-white.svg";
 
-export default function Navbar() {
+export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
@@ -83,7 +81,7 @@ export default function Navbar() {
               <div className="relative h-8 w-28 sm:w-36">
                 {scrolled ? (
                   <Image
-                    src={LogoImg}
+                    src={"/logo/logo-header.svg"}
                     alt="그루 로고"
                     fill
                     style={{ objectFit: "contain" }}
@@ -91,7 +89,7 @@ export default function Navbar() {
                   />
                 ) : (
                   <Image
-                    src={WhiteLogoImg}
+                    src={"/logo/logo-white-all.svg"}
                     alt="그루 로고"
                     fill
                     style={{ objectFit: "contain" }}

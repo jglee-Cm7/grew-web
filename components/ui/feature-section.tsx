@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ReactNode } from "react";
-import FadeIn from "./FadeIn";
+import { FadeIn } from "./fade-in";
 
 // New interface for subheadings and their text
 interface SubSection {
@@ -44,7 +44,7 @@ interface FeatureSectionProps {
  * @param {string} props.id - Optional ID for the section
  * @param {string} props.className - Additional CSS classes
  */
-export default function FeatureSection({
+export function FeatureSection({
   imageUrl,
   imageAlt,
   imageOnRight = false,

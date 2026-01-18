@@ -1,15 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import LogoWhiteImageGreenText from "@/public/logo/logo-white-image-green-text.svg";
 
-export default function Footer() {
+export function Footer() {
   return (
     <footer className="bg-[#333333] py-12">
       <div className="container mx-auto max-w-7xl px-4">
         {/* Logo Section - Full Width */}
         <div className="mb-8">
           <Image
-            src={LogoWhiteImageGreenText}
+            src={"/logo/logo-white-image-green-text.svg"}
             alt="그루Grew 로고"
             width={120}
             height={40}

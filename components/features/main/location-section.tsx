@@ -1,9 +1,7 @@
 import Image from "next/image";
-import GrewMap from "@/public/mainpage/map.svg";
-import Button from "../ui/Button";
-import FadeIn from "../ui/FadeIn";
+import { Button, FadeIn } from "@/components/ui";
 
-export default function Locations() {
+export function LocationSection() {
   return (
     <section
       id="locations"
@@ -15,7 +13,7 @@ export default function Locations() {
           <div className="mb-12 md:hidden">
             <div className="relative -mt-16 h-[400px] w-full">
               <Image
-                src={GrewMap}
+                src={"/mainpage/map.svg"}
                 alt="대한민국 지도"
                 fill
                 priority
@@ -71,7 +69,7 @@ export default function Locations() {
             <FadeIn direction="left">
               <div className="relative -mt-38 h-[600px] w-full">
                 <Image
-                  src={GrewMap}
+                  src={"/mainpage/map.svg"}
                   alt="대한민국 지도"
                   fill
                   priority

@@ -8,12 +8,12 @@ type TabOption = {
   content: React.ReactNode;
 };
 
-interface TabSystemProps {
+interface TabsProps {
   tabs: TabOption[];
   defaultTab?: string;
 }
 
-const TabSystem = ({ tabs, defaultTab }: TabSystemProps) => {
+export function Tabs({ tabs, defaultTab }: TabsProps) {
   const [activeTab, setActiveTab] = useState(defaultTab || tabs[0].id);
   const [renderKey, setRenderKey] = useState(0);
 
@@ -45,6 +45,4 @@ const TabSystem = ({ tabs, defaultTab }: TabSystemProps) => {
       </div>
     </div>
   );
-};
-
-export default TabSystem;
+}

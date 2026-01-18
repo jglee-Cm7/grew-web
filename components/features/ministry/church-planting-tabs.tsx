@@ -1,10 +1,9 @@
 // components/ChurchPlantingTabs.tsx
 "use client";
 
-import TabSystem from "../../components/ui/TabSystem";
-import FeatureSection from "../../components/ui/FeatureSection"; // Import the refactored component
+import { Tabs, FeatureSection } from "@/components/ui";
 
-const ChurchPlantingTabs = () => {
+export function ChurchPlantingTabs() {
   // Front Office Content
   const frontOfficeContent = (
     <div className="space-y-0">
@@ -103,9 +102,7 @@ const ChurchPlantingTabs = () => {
 
   return (
     <div className="mx-auto max-w-6xl">
-      <TabSystem tabs={tabOptions} defaultTab="frontOffice" />
+      <Tabs tabs={tabOptions} defaultTab="frontOffice" />
     </div>
   );
-};
-
-export default ChurchPlantingTabs;
+}

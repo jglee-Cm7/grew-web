@@ -1,11 +1,10 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
-import GrewLogoWhite from "@/public/logo/logo-white-all.svg";
 import Image from "next/image";
-import FadeIn from "../ui/FadeIn";
+import { useState, useRef, useEffect } from "react";
+import { FadeIn } from "@/components/ui";
 
-export default function Hero() {
+export function HeroSection() {
   // Define the video path constant here - no import needed
   const videoPath = "/mainpage/brand-film.webm";
   const [isPlaying, setIsPlaying] = useState(false);
@@ -96,7 +95,7 @@ export default function Hero() {
         <FadeIn>
           <div>
             <Image
-              src={GrewLogoWhite}
+              src={"/logo/logo-white-all.svg"}
               alt="그루 로고"
               width={350}
               height={120}

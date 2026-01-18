@@ -1,7 +1,7 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import Image from "next/image";
 import { StaticImageData } from "next/image";
-import FadeIn from "../ui/FadeIn";
+import { FadeIn } from "@/components/ui";
 
 interface PageHeaderProps {
   backgroundImage: StaticImageData | string;
@@ -15,7 +15,7 @@ interface PageHeaderProps {
   priority?: boolean;
 }
 
-const PageHeader: React.FC<PageHeaderProps> = ({
+export function PageHeader({
   backgroundImage,
   children,
   height = "400px",
@@ -25,7 +25,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({
   textPosition = "center",
   textAlignment = "center",
   priority = true,
-}) => {
+}: PageHeaderProps) {
   // Calculate text positioning
   const getTextPosition = () => {
     switch (textPosition) {
@@ -88,6 +88,4 @@ const PageHeader: React.FC<PageHeaderProps> = ({
       </div>
     </div>
   );
-};
-
-export default PageHeader;
+}

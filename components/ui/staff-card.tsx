@@ -1,6 +1,5 @@
 // StaffCard.tsx
-import Image from 'next/image';
-import React from 'react';
+import Image from "next/image";
 
 export interface StaffMember {
   id: string;
@@ -10,10 +9,10 @@ export interface StaffMember {
   badgeText: string;
 }
 
-const StaffCard: React.FC<{ member: StaffMember }> = ({ member }) => {
+export function StaffCard({ member }: { member: StaffMember }) {
   return (
     <div className="flex h-full flex-col overflow-hidden rounded-lg bg-white shadow-sm">
-      <div className="relative w-full" style={{ paddingBottom: '75%' }}>
+      <div className="relative w-full" style={{ paddingBottom: "75%" }}>
         <Image
           src={member.imageSrc}
           alt={`${member.name} profile`}
@@ -22,7 +21,7 @@ const StaffCard: React.FC<{ member: StaffMember }> = ({ member }) => {
           className="object-cover object-center"
         />
       </div>
-      <div className="flex flex-grow flex-col p-4">
+      <div className="flex grow flex-col p-4">
         <div className="mb-2">
           <span className="inline-block rounded bg-green-500 px-2 py-1 text-xs font-semibold text-white">
             {member.badgeText}
@@ -37,6 +36,4 @@ const StaffCard: React.FC<{ member: StaffMember }> = ({ member }) => {
       </div>
     </div>
   );
-};
-
-export default StaffCard;
+}

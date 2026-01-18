@@ -1,19 +1,20 @@
-import PageHeader from "@/components/layout/PageHeader";
-import KakaoMap from "@/components/KakaoMap/KakaoMap";
+import { PageHeader } from "@/components/layout";
+import { KakaoMap } from "@/components/features";
 
-const locations = [
-  {
-    title: "시광교회 문래 캠퍼스",
-    lat: 37.5150641632063,
-    lng: 126.88607722083,
-  },
-  {
-    title: "시광교회 신촌 캠퍼스",
-    lat: 37.5544148008909,
-    lng: 126.934261335891,
-  },
-];
-const LocationsPage = () => {
+export default function LocationsPage() {
+  const locations = [
+    {
+      title: "시광교회 문래 캠퍼스",
+      lat: 37.5150641632063,
+      lng: 126.88607722083,
+    },
+    {
+      title: "시광교회 신촌 캠퍼스",
+      lat: 37.5544148008909,
+      lng: 126.934261335891,
+    },
+  ];
+
   return (
     <main>
       <PageHeader backgroundImage="/pageheaders/church-planting-bg.webp">
@@ -29,6 +30,4 @@ const LocationsPage = () => {
       </section>
     </main>
   );
-};
-
-export default LocationsPage;
+}

@@ -1,8 +1,7 @@
 import Image from "next/image";
-import Button from "../ui/Button";
-import FadeIn from "../ui/FadeIn";
+import { Button, FadeIn } from "@/components/ui";
 
-export default function GiveSection() {
+export function GiveSection() {
   return (
     <section
       id="give"
