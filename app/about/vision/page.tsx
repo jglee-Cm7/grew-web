@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { PageHeader } from "@/components/layout";
 import { SupportProcessSection } from "@/components/features";
-import { FadeIn } from "@/components/ui";
+import { FadeIn } from "@/lib/motion";
 
 export default function AboutVisionPage() {
   return (

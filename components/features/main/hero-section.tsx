@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
-import { FadeIn } from "@/components/ui";
+import { FadeIn } from "@/lib/motion";
 
 export function HeroSection() {
   // Define the video path constant here - no import needed

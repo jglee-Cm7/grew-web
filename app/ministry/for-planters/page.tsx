@@ -1,5 +1,6 @@
 import { PageHeader } from "@/components/layout";
-import { FadeIn, FeatureSection } from "@/components/ui";
+import { FeatureSection } from "@/components/ui";
+import { FadeIn } from "@/lib/motion";
 
 export default function ForPlantersPage() {
   return (

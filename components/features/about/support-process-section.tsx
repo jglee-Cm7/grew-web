@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { FadeIn } from "@/components/ui";
+import { FadeIn } from "@/lib/motion";
 
 export function SupportProcessSection() {
   const [isMobile, setIsMobile] = useState(false);

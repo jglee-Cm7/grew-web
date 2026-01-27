@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ReactNode } from "react";
-import { FadeIn } from "./fade-in";
+import { FadeIn } from "@/lib/motion";
 
 // New interface for subheadings and their text
 interface SubSection {

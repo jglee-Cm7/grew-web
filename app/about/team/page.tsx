@@ -1,5 +1,6 @@
 import { PageHeader } from "@/components/layout";
-import { FadeIn, StaffCard, StaffMember } from "@/components/ui";
+import { StaffCard, StaffMember } from "@/components/ui";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/lib/motion";
 
 export default function AboutTeamPage() {
   const staffMembers: StaffMember[] = [
@@ -35,13 +36,15 @@ export default function AboutTeamPage() {
           <FadeIn delay="short">
             <h2 className="mb-8 text-3xl font-bold">자문단</h2>
           </FadeIn>
-          <FadeIn delay="medium">
+          <StaggerContainer delay={0.2}>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {staffMembers.map((member) => (
-                <StaffCard key={member.id} member={member} />
+                <StaggerItem key={member.id}>
+                  <StaffCard member={member} />
+                </StaggerItem>
               ))}
             </div>
-          </FadeIn>
+          </StaggerContainer>
         </div>
       </section>
     </main>

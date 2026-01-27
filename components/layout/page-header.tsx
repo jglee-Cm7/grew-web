@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import Image from "next/image";
 import { StaticImageData } from "next/image";
-import { FadeIn } from "@/components/ui";
+import { FadeIn } from "@/lib/motion";
 
 interface PageHeaderProps {
   backgroundImage: StaticImageData | string;

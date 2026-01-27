@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FadeIn } from "@/components/ui";
+import { FadeIn } from "@/lib/motion";
 
 export function AboutSection() {
   return (

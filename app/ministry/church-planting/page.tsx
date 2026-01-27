@@ -1,7 +1,7 @@
 // app/church-planting/page.tsx
 import { PageHeader } from "@/components/layout";
 import { ChurchPlantingTabs } from "@/components/features";
-import { FadeIn } from "@/components/ui";
+import { FadeIn } from "@/lib/motion";
 
 export default function ChurchPlantingPage() {
   return (

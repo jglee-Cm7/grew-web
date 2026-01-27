@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { Button, FadeIn } from "@/components/ui";
+import { Button } from "@/components/ui";
+import { FadeIn } from "@/lib/motion";
 
 export function LocationSection() {
   return (
