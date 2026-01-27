@@ -1,12 +1,12 @@
 // app/church-planting/page.tsx
-import PageHeader from "@/components/layout/PageHeader";
-import ChurchPlantingTabs from "@/components/ministrypage/ChurchPlantingTabs";
-import FadeIn from "@/components/ui/FadeIn";
+import { PageHeader } from "@/components/layout";
+import { ChurchPlantingTabs } from "@/components/features";
+import { FadeIn } from "@/lib/motion";
 
-const ChurchPlantingPage = () => {
+export default function ChurchPlantingPage() {
   return (
     <main>
-      <PageHeader backgroundImage="/pageheaders/church-planting-bg.png">
+      <PageHeader backgroundImage="/pageheaders/church-planting-bg.webp">
         교회 개척 지원
       </PageHeader>
       <section className="px-4 py-8 sm:px-6 md:px-8 lg:px-12">
@@ -27,6 +27,4 @@ const ChurchPlantingPage = () => {
       </section>
     </main>
   );
-};
-
-export default ChurchPlantingPage;
+}

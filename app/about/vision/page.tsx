@@ -1,21 +1,21 @@
-import PageHeader from "@/components/layout/PageHeader";
-import AboutVisionBg from "@/public/pageheaders/about-vision-bg.png";
-import FullLogo from "@/public/logo/logo-img-name-text.svg";
 import Image from "next/image";
-import SupportProcessSection from "@/components/aboutpage/SupportProcessSection";
-import FadeIn from "@/components/ui/FadeIn";
+import { PageHeader } from "@/components/layout";
+import { SupportProcessSection } from "@/components/features";
+import { FadeIn } from "@/lib/motion";
 
-const AboutVisionPage = () => {
+export default function AboutVisionPage() {
   return (
     <main>
-      <PageHeader backgroundImage={AboutVisionBg}>우리의 비전</PageHeader>
+      <PageHeader backgroundImage={"/pageheaders/about-vision-bg.webp"}>
+        우리의 비전
+      </PageHeader>
       <FadeIn>
         <section className="mx-auto mt-8 flex max-w-4xl flex-col items-center px-4 py-16 text-center">
           {/* Logo */}
           <div className="mb-8">
             <div className="relative h-[140px] w-[140px] md:h-[160px] md:w-[160px] lg:h-[200px] lg:w-[200px]">
               <Image
-                src={FullLogo}
+                src={"/logo/logo-img-name-text.svg"}
                 alt="Grew Logo"
                 fill
                 priority
@@ -48,7 +48,7 @@ const AboutVisionPage = () => {
         {/* 상단 이미지 배경 영역 */}
         <div className="relative flex min-h-[600px] w-full items-center justify-center py-20 md:min-h-[800px] md:py-32">
           <Image
-            src="/about-page/bg-who-01.png"
+            src="/about-page/bg-who-01.webp"
             alt="왜 도시인가 배경"
             fill
             priority
@@ -102,6 +102,4 @@ const AboutVisionPage = () => {
       </FadeIn>
     </main>
   );
-};
-
-export default AboutVisionPage;
+}

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Navbar from "../components/layout/NewNavbar";
-import Footer from "../components/layout/Footer";
+import { Navbar, Footer } from "@/components/layout";
 import Script from "next/script";
 
 import "./globals.css";
