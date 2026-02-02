@@ -42,7 +42,7 @@ export function SupportProcessSection() {
                 {" "}
                 {/* Left column */}
                 <div className="mb-8 flex flex-col items-center md:mb-0 md:w-5/12 md:scale-90 lg:scale-100">
-                  <h2 className="mb-4 text-xl font-medium text-white md:text-xl lg:text-2xl">
+                  <h2 className="my-4 text-xl font-medium text-white md:text-xl lg:text-2xl">
                     개척자들이 겪는 한계
                   </h2>
 

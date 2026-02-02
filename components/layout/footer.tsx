@@ -133,24 +133,21 @@ export function Footer() {
                 </ul>
               </div>
 
-              {/* <div className="col-span-1">
-                <h3 className="text-white font-semibold mb-4">자료실</h3>
-                <ul className="space-y-3 text-gray-400 text-sm">
+              <div className="col-span-1">
+                <h3 className="mb-4 font-semibold text-white">자료실</h3>
+                <ul className="space-y-3 text-sm text-gray-400">
                   <li>
-                    <Link
-                      href="http://youtube.com/@Grew-h1z"
-                      className="hover:text-white"
-                    >
-                      개척 칼럼
+                    <Link href="/board/column" className="hover:text-white">
+                      목회 칼럼
                     </Link>
                   </li>
                   <li>
-                    <Link href="/articles" className="hover:text-white">
+                    <Link href="/board/research" className="hover:text-white">
                       논문 및 자료
                     </Link>
                   </li>
                 </ul>
-              </div> */}
+              </div>
 
               <div className="col-span-1">
                 <h3 className="mb-4 font-semibold text-white">교회 찾기</h3>
