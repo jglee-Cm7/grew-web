@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Navbar, Footer } from "@/components/layout";
 import Script from "next/script";
 
-import "./globals.css";
+import "../globals.css";
 
 export const metadata: Metadata = {
   title: "그루Grew - Church Planting for Cities",
@@ -52,9 +52,9 @@ export default function RootLayout({
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body>
+      <body className="flex min-h-screen flex-col">
         <Navbar />
-        {children}
+        <main className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>
