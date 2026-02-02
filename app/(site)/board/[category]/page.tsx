@@ -9,6 +9,9 @@ import {
   urlFor,
 } from "@/lib/sanity";
 
+// searchParams 사용으로 인한 동적 렌더링 명시
+export const dynamic = "force-dynamic";
+
 interface BoardPageProps {
   params: Promise<{ category: string }>;
   searchParams: Promise<{ page?: string; q?: string }>;
